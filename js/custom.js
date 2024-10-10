@@ -674,3 +674,58 @@ jQuery(window).on('resize',function () {
 
 
 /*  + // - in Cart */
+
+window.onload = function() {
+
+	let plusIcons = document.querySelectorAll('.ti-plus');
+	plusIcons.forEach(function(icon) {
+		icon.classList.remove('ti-plus');
+		icon.classList.add('fa', 'fa-plus');
+	});
+
+	
+	const minusIcons = document.querySelectorAll('.ti-minus');
+	minusIcons.forEach(function(icon) {
+		icon.classList.remove('ti-minus');
+		icon.classList.add('fa', 'fa-minus');
+	});
+	const placeholderIcons = document.querySelectorAll('.flaticon-placeholder');
+	placeholderIcons.forEach(function(icon) {
+		
+		icon.classList.remove('flaticon-placeholder');
+		icon.classList.add('fa-solid', 'fa-location-dot');
+	});
+
+	const phoneIcons = document.querySelectorAll('.flaticon-phone');
+	phoneIcons.forEach(function(icon) {
+	
+		icon.classList.remove('flaticon-phone');
+		icon.classList.add('fa-solid', 'fa-phone');
+	});
+
+	const emailIcons = document.querySelectorAll('.flaticon-email');
+	emailIcons.forEach(function(icon) {
+		
+		icon.classList.remove('flaticon-email');
+		icon.classList.add('fa-regular', 'fa-envelope');
+	});
+
+	const closeIcons = document.querySelectorAll('.ti-close');
+	closeIcons.forEach(function(icon) {
+		
+		icon.classList.remove('ti-close');
+		icon.classList.add('fa-solid', 'fa-xmark');
+	});
+
+	const heartIcons = document.querySelectorAll('.flaticon-heart');
+	heartIcons.forEach(function(icon) {
+		
+		icon.classList.remove('flaticon-heart');
+		icon.classList.add('fa-solid', 'fa-heart');
+	});
+
+};
+
+
+
+
