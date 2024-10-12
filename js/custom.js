@@ -1,7 +1,14 @@
 /**
+ * 
 /**
+ * 
 Core script to handle the entire theme and core functions
 **/
+
+
+
+
+
 var Bookland = function(){
 	/* Search Bar ============ */
 	siteUrl = '';
@@ -673,6 +680,9 @@ jQuery(window).on('resize',function () {
 /*  Window Resize END */
 
 
+
+
+
 /*  + // - in Cart */
 
 window.onload = function() {
@@ -729,3 +739,23 @@ window.onload = function() {
 
 
 
+const plusButtons = document.querySelectorAll(".plus_Button");
+const minusButtons = document.querySelectorAll(".minus_Button");
+
+const inputs = document.querySelectorAll(".quantity input");
+
+plusButtons.forEach((button, index) => {
+    button.addEventListener("click", () => {
+        let currentValue = parseInt(inputs[index].value) || 0;
+        inputs[index].value = currentValue + 1;
+    });
+});
+
+minusButtons.forEach((button, index) => {
+    button.addEventListener("click", () => {
+        let currentValue = parseInt(inputs[index].value) || 0;
+        if (currentValue > 1) {
+            inputs[index].value = currentValue - 1;
+        }
+    });
+});
